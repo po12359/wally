@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Freckle+Face&display=swap"
       rel="stylesheet"
     />
+    <script defer src="src/main.js"></script>
     <script
       defer
       src="https://kit.fontawesome.com/fa6aab1a0c.js"
@@ -19,23 +20,25 @@
     <title>Wally-Find</title>
   </head>
   <body>
-    <nav class="game">
-      <section class="game__didscription">
-        <span class="game__score">0</span>
-        <span class="game__level">Level 1</span>
-        <span class="game__timer">00:00</span>
-      </section>
-      <span class="game__title">Wally Find</span>
+    <section class="game__didscription">
+      <span class="game__score">0</span>
+      <span class="game__level">Level 1</span>
+      <span class="game__timer">00:00</span>
+    </section>
+    <section class="game">
       <div class="game__start">
-        <img src="img/wally.png" alt="#" />
+        <span class="game__title">Wally Find</span>
         <button class="game__start-button">
           <i class="fab fa-google-play"></i>
         </button>
-        <img src="img/wally.png" alt="#" />
       </div>
-    </nav>
-
-    <button class="toggle__button">Info</button>
+    </section>
+    <section class="field"></section>
+    <section class="pop-up">
+      <button class="pop-up__refresh"><i class="fas fa-reply-all"></i></button>
+      <span class="pop-up__message">Really?</span>
+    </section>
+    <button class="toggle__button pulsate-bck">Info</button>
     <section class="toggle_section puff-in-bottom non-display">
       <button class="toggle__close"><i class="fas fa-door-closed"></i></button>
       <h2>Introduction</h2>
@@ -52,3 +55,5 @@
     </section>
   </body>
 </html>
+<!-- <i class="fas fa-stop"></i> -->
+<!-- <i class="fab fa-apple"></i> -->
