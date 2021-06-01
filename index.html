@@ -4,56 +4,72 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta type="content" content="wally-find" />
+    <meta name="discription" content="find wally!" />
+    <title>Wally Game</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Freckle+Face&display=swap"
-      rel="stylesheet"
-    />
-    <script type="module" defer src="src/main.js"></script>
-    <script
-      defer
-      src="https://kit.fontawesome.com/fa6aab1a0c.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>Wally-Find</title>
+    <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet" />
+    <script defer src="https://kit.fontawesome.com/fa6aab1a0c.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <section class="game__didscription">
-      <span class="game__score">0</span>
-      <span class="game__level">Level 1</span>
-      <span class="game__timer">00:00</span>
+    <!-- start screen -->
+    <section class="start-screen">
+      <header class="start__title">Let's go! Find Wally</header>
+      <button class="start__button">Game Start!</button>
     </section>
-    <section class="game">
-      <div class="game__start">
-        <span class="game__title">Wally Find</span>
-        <button class="game__start-button">
-          <i class="fab fa-google-play"></i>
-        </button>
+    <!-- pop up -->
+    <section id="pop-up">
+      <div class="pop-up">
+        <h1 class="pop-up__title">Replay❓</h1>
+        <div class="pop-up__button">
+          <button class="pop-up__replay"><i class="fas fa-reply"></i></button>
+          <button class="pop-up__next"><i class="fas fa-arrow-right"></i></button>
+        </div>
       </div>
     </section>
-    <section class="field"></section>
-    <section class="pop-up">
-      <button class="pop-up__refresh"><i class="fas fa-reply-all"></i></button>
-      <span class="pop-up__message">Really?</span>
+    <!-- toggle btn -->
+    <button class="toggle__button"><i class="fas fa-question"></i></button>
+    <!-- game info -->
+    <section id="game-info" class="open">
+      <div class="game-info">
+        <button class="info__close">X</button>
+        <header class="info__title">⏱ 월리를 찾아라!</header>
+        <ul class="info">
+          <li class="info_list">
+            <span
+              >💡 이미지와 같은 2명의 월리를 찾으세요!<br />
+              <img src="img/wally.png" alt="#" />
+            </span>
+          </li>
+          <li class="info_list">
+            <span>
+              💡 이미지와 다른 모습의 월리를 찾거나 월리의 여자친구를 찾을시 게임은 종료됩니다.
+              <br />
+              <img src="img/wally1.png" alt="#" /><img src="img/wally-gf.png" alt="#"
+            /></span>
+          </li>
+          <li class="info_list">
+            <span>💡 월리를 모두 찾을 시 다음 단계로 넘어갈 수 있습니다.</span>
+          </li>
+          <li class="info_list">
+            <span>💡 타임아웃 그리고 잘못된 선택을 했을 시 게임은 초기화 됩니다.</span>
+          </li>
+        </ul>
+      </div>
     </section>
-    <button class="toggle__button pulsate-bck">Info</button>
-    <section class="toggle_section puff-in-bottom non-display">
-      <button class="toggle__close"><i class="fas fa-door-closed"></i></button>
-      <h2>Introduction</h2>
-      <article>Thanks for playing this game. Rules are really simple.</article>
-      <div>■</div>
-      <article class="detail_description">
-        <span
-          >🥇Goal: Collect all the wally-girlfriend within the limited
-          time.</span
-        >
-        <span>💥Fail: Touch wally Time out.</span>
-        <span>Then good luck and hope you enjoy the game.🧡🤩</span>
-      </article>
+    <!-- game field -->
+    <section id="game">
+      <div class="game">
+        <button class="game__stop"><i class="far fa-hand-paper"></i></button>
+        <div class="game__box">
+          <span class="game__timer">00:00</span>
+          <!--  -->
+          <span class="game__level">Level 1</span>
+          <!--  -->
+          <span class="game__score">2</span>
+        </div>
+      </div>
+      <main class="field"></main>
     </section>
   </body>
 </html>
-<!-- <i class="fas fa-stop"></i> -->
-<!-- <i class="fab fa-apple"></i> -->
